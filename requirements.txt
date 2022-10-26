@@ -1,0 +1,2 @@
+deepchecks==0.9.*
+dvc[gdrive]
