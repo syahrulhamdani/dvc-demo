@@ -1,0 +1,4 @@
+[core]
+    remote = 20221105
+['remote "20221105"']
+    url = gs://dvc-demo-dataset/phishing/20221105
