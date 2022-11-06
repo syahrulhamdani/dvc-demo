@@ -7,3 +7,14 @@ stages:
     outs:
     - data/split/phishing_train.csv
     - data/split/phishing_test.csv
+  train:
+    cmd: python src/train.py -d data/split/phishing_train.csv -m outputs/models/model.joblib
+      --metrics outputs/metrics/train_metrics.json
+    deps:
+    - data/split/phishing_train.csv
+    - src/train.py
+    outs:
+    - outputs/models/model.joblib
+    metrics:
+    - outputs/metrics/train_metrics.json:
+        cache: false

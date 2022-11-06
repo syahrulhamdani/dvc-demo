@@ -16,3 +16,20 @@ stages:
     - path: data/split/phishing_train.csv
       md5: 5750e4684ba346cb676b08bcd2ca7f9b
       size: 1177328
+  train:
+    cmd: python src/train.py -d data/split/phishing_train.csv -m outputs/models/model.joblib
+      --metrics outputs/metrics/train_metrics.json
+    deps:
+    - path: data/split/phishing_train.csv
+      md5: 5750e4684ba346cb676b08bcd2ca7f9b
+      size: 1177328
+    - path: src/train.py
+      md5: d4238de8ec42a7ab8ee625f77e84ceef
+      size: 2538
+    outs:
+    - path: outputs/metrics/train_metrics.json
+      md5: dc7f9b577265c1321d40171632d000bb
+      size: 524
+    - path: outputs/models/model.joblib
+      md5: 67595616e4283d609dd0883e75d0b3e4
+      size: 4254

@@ -1,0 +1,16 @@
+stages:
+  stage_name:
+    cmd: python ...
+    deps:
+      - data/data.csv
+    outs:
+      - data/train.csv
+      - data/test.csv
+  another_stage:
+    cmd: python ...
+    deps:
+      - data/train.csv
+    outs:
+      - model.joblib
+    metrics:
+      - outputs/metrics_train.json
