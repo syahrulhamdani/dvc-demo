@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python src/prepare.py -d data/raw/phishing.csv
+    deps:
+    - path: data/raw/phishing.csv
+      md5: 7676625c0425fe0311586eb9c1c4110e
+      size: 1593823
+    - path: src/prepare.py
+      md5: b0673b059291c6c93ab10ead58cb92e7
+      size: 1771
+    outs:
+    - path: data/split/phishing_test.csv
+      md5: 6f0a0e6dddc12545328bcac9122f5c39
+      size: 291817
+    - path: data/split/phishing_train.csv
+      md5: 5750e4684ba346cb676b08bcd2ca7f9b
+      size: 1177328

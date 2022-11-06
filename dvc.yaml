@@ -1,0 +1,9 @@
+stages:
+  prepare:
+    cmd: python src/prepare.py -d data/raw/phishing.csv
+    deps:
+    - data/raw/phishing.csv
+    - src/prepare.py
+    outs:
+    - data/split/phishing_train.csv
+    - data/split/phishing_test.csv

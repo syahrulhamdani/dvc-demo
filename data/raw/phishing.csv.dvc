@@ -1,0 +1,4 @@
+outs:
+- md5: 7676625c0425fe0311586eb9c1c4110e
+  size: 1593823
+  path: phishing.csv
