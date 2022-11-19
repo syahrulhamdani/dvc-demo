@@ -129,4 +129,4 @@ dmypy.json
 .pyre/
 
 *.csv
-cerita-data-sa.json
+.DS_STORE
